@@ -1,4 +1,3 @@
-// Controllers/BillingLinesController.cs
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BillingAPI.Data;
@@ -17,7 +16,7 @@ public class BillingLinesController : ControllerBase
 
     // GET: api/BillingLines
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<BillingLine>>> GetBillingLines()
+    public async Task<ActionResult<IEnumerable<BillingLine>>> GetBillingLine()
     {
         return await _context.BillingLines.Include(bl => bl.Product).ToListAsync();
     }

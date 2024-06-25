@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BillingAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5105ec5aa6d4892962a6bd1779062bd64e7e694")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2433253726e6fde964250aecb21d9cc8779c6cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("BillingAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BillingAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

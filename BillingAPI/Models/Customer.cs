@@ -15,7 +15,7 @@ namespace BillingAPI.Models
         public String Email { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        public String Adress { get; set; }
+        public String Address { get; set; }
     }
 }
 

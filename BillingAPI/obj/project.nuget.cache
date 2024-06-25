@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fyyVGNb2k2MHQ0hILcT9xaznGFb8dHV9CtY3rNRA/nKGweTbo/r46olpJGBrGa0V0tl/7aR/L8LxifYw6qmmiA==",
+  "dgSpecHash": "zZmwGq4JYU/cP3ZH0tOlIi7NLgFeW7a6t/qfQNCYkQE8JW1Q4P62aOdeBw+15p32uSGAH556Ty4ofM9MOgl/xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\douglas.morais\\Source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
+  "projectFilePath": "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\douglas.morais\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\douglas.morais\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
