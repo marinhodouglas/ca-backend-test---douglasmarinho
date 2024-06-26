@@ -1,56 +1,69 @@
-**Teste para vaga de Desenvolvimento Back-end .NET**
----------------------
-Criar uma API REST para gerenciar faturamento de clientes.
----------------------
-**Funcionalidades 🛠️**
+# Projeto BillingAPI
 
-* Customer: CRUD; Criar um cadastro do cliente com os seguintes campos:
-    * Id;
-    * Name;
-    * Email;
-    * Address;
-    * **Todos os campos são de preenchimento obrigatório.**
-* Produtos: CRUD; Criar um cadastro de produtos com os seguintes campos:
-    * Id;
-    * Nome do produto;
-    * **Todos os campos são de preenchimento obrigatório.**
-* Controle de conferência e importação de billing.
-    * Utilizar postman para consulta dos dados da API’s para criação das tabelas de billing e billingLines.
-	  * Após consulta, e criação do passo anterior, inserir no banco de dados o primeiro registro do retorno da API de billing para criação de cliente e produto através do swagger ou dataseed.
+Este projeto implementa uma API para gerenciamento de faturamento de clientes, com funcionalidades para criar, atualizar, ler e deletar informações de clientes e produtos, além de importar dados de faturamento de APIs externas.
 
-    * Utilizar as API’s para consumo dos dados a partir da aplicação que está criada e fazer as seguintes verificações:
-      * Se o cliente e o produto existirem, inserir o registro do billing e billingLines no DB local.
-      * Caso se o cliente existir ou só o produto existir, deve retornar um erro na aplicação informando sobre a criação do registro faltante.
-      * Criar exceptions tratando mal funcionamento ou interrupção de serviço quando API estiver fora.
-* Lista de API’s :
-	* Get https://65c3b12439055e7482c16bca.mockapi.io/api/v1/billing
-	* Get https://65c3b12439055e7482c16bca.mockapi.io/api/v1/billing/:id
-	* Post https://65c3b12439055e7482c16bca.mockapi.io/api/v1/billing
-	* Delete https://65c3b12439055e7482c16bca.mockapi.io/api/v1/billing/:id
-	* PUT https://65c3b12439055e7482c16bca.mockapi.io/api/v1/billing/:id
----------------------
-**Requisitos 💻**
+## Tecnologias Utilizadas
 
-* A aplicação deverá ser desenvolvida usando .NET a partir da versão 5+;
-* Modelagem de dados pode ser no banco de dados de sua preferência, podendo ser um banco relacional ou não relacional (mongodb, SQL Server, PostgreSQL, MySQL, etc);
-* Persistência de dados no banco deverá ser feita utilizando o Entity Framework Core;
-* O retorno da API deverá ser em formato JSON;
-* Utilizar as requisições GET, POST, PUT ou DELETE, conforme a melhor prática;
-* Criar o README do projeto descrevendo as tecnologias utilizadas, chamadas dos serviços e configurações necessário para executar a aplicação.
----------------------
-**Pontos Extras ⭐**
+- **Plataforma:** .NET Core 8.0.302
+- **Linguagem:** C#
+- **Banco de Dados:** SQL Server
+- **Ferramentas:** Postman para testes de API, Swagger para documentação e teste de API
 
-* Desenvolvimento baseado em TDD;
-* Práticas de modelagem de projeto;
-* Criar e configurar o Swagger da API de acordo com as melhores práticas;
-* Criar uma API para extração dos dados de faturamento.
-* Sugestões serão bem vindas.
----------------------
-**Submissão do teste 📝**
+## Estrutura da API
 
-Crie um fork do teste para acompanharmos o seu desenvolvimento através dos seus commits.
+A API possui os seguintes endpoints principais:
 
----------------------
-Obrigado!
+### Clientes
 
-Agradecemos sua participação no teste. Boa sorte! 😄
+- **GET** `/api/customers`: Retorna todos os clientes cadastrados.
+- **GET** `/api/customers/{id}`: Retorna um cliente específico pelo ID.
+- **POST** `/api/customers`: Cria um novo cliente.
+- **PUT** `/api/customers/{id}`: Atualiza as informações de um cliente existente.
+- **DELETE** `/api/customers/{id}`: Remove um cliente pelo ID.
+
+### Produtos
+
+- **GET** `/api/products`: Retorna todos os produtos cadastrados.
+- **GET** `/api/products/{id}`: Retorna um produto específico pelo ID.
+- **POST** `/api/products`: Cria um novo produto.
+- **PUT** `/api/products/{id}`: Atualiza as informações de um produto existente.
+- **DELETE** `/api/products/{id}`: Remove um produto pelo ID.
+
+### Importação de Faturamento
+
+- **POST** `/api/import/billing`: Importa dados de faturamento de uma API externa.
+
+## Configuração
+
+Para executar este projeto localmente, siga estas etapas:
+
+1. **Clonar o repositório**:
+
+   ```bash
+   git clone https://github.com/marinhodouglas/ca-backend-test---douglasmarinho
+   cd BillingAPI
+
+2. **Configurar o ambiente**:
+- Instale o SDK do .NET Core 8.0 ou superior.
+- Configure seu banco de dados SQL Server atualizando a connection string em `appsettings.json`.
+
+3. **Executar a aplicação**:
+
+    ```bash
+   dotnet run
+   
+5. **Testar a API**:
+- Use o Postman ou outra ferramenta de sua preferência para enviar requisições HTTP para os endpoints listados acima.
+
+## Documentação da API (Swagger)
+
+A API está documentada usando o Swagger, uma ferramenta para descrição, documentação e teste de APIs. Após iniciar a aplicação localmente, acesse a documentação da API em:
+
+http://localhost:{porta}/swagger
+
+Substitua `{porta}` pela porta em que a aplicação está sendo executada localmente (por padrão, é geralmente 5000 ou 5001).
+
+## Arquitetura do Projeto
+
+O projeto segue uma arquitetura em camadas, com separação de responsabilidades entre Controllers, Services e Repositories. Utiliza o padrão Repository para acesso aos dados e serviços para regras de negócio.
+
