@@ -1,13 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace BillingAPI.Models
+﻿namespace BillingAPI.Models
 {
     public class Product
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Campo obrigatório")]
-        public String ProductName { get; set; }
-
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public ICollection<BillingLine> BillingLines { get; set; }
     }
 }

@@ -1,21 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace BillingAPI.Models
-
+﻿namespace BillingAPI.Models
 {
     public class Customer
     {
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Campo obrigatório")]
-        public String Name { get; set; }
-
-        [Required(ErrorMessage = "Campo obrigatório")]
-        public String Email { get; set; }
-
-        [Required(ErrorMessage = "Campo obrigatório")]
-        public String Address { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public ICollection<Billing> Billings { get; set; }
     }
 }
-

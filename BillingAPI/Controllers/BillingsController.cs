@@ -17,13 +17,13 @@ public class BillingsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Billing>>> GetBillings()
     {
-        return await _context.Billings.Include(b => b.BillingLines).ToListAsync();
+        return await _context.Billings.Include(b => b.Lines).ToListAsync();
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Billing>> GetBilling(int id)
     {
-        var billing = await _context.Billings.Include(b => b.BillingLines).FirstOrDefaultAsync(b => b.Id == id);
+        var billing = await _context.Billings.Include(b => b.Lines).FirstOrDefaultAsync(b => b.Id == id);
         if (billing == null)
         {
             return NotFound();

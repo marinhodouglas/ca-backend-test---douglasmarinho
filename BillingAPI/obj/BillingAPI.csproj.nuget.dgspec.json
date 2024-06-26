@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj": {}
+    "C:\\Users\\dougl\\source\\repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj": {
+    "C:\\Users\\dougl\\source\\repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dougl\\source\\repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
         "projectName": "BillingAPI",
-        "projectPath": "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
-        "packagesPath": "C:\\Users\\douglas.morais\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\douglas.morais\\source\\Repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\obj\\",
+        "projectPath": "C:\\Users\\dougl\\source\\repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\BillingAPI.csproj",
+        "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dougl\\source\\repos\\marinhodouglas\\ca-backend-test---douglasmarinho\\BillingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\douglas.morais\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,6 +54,12 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -62,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -87,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
